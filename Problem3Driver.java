@@ -6,7 +6,7 @@ import java.awt.Color;
 public class Problem3Driver implements Directions
 {
     public static void main(String args[])  {
-        Problem3 lucy = new Problem3(7,5,North,0);
+        Problem3 lucy = new Problem3(7,5,North,100);
         lucy.closeAllWindows();
         lucy.turnOff();
         

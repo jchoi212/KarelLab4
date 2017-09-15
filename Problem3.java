@@ -12,13 +12,33 @@ public class Problem3 extends Problem2
     }
     
     public void closeAllWindows() {
+        turnLeft();
+        move();
         travelPerimeter();
-        closeWindows();
     }
     public void travelPerimeter() {
         while (!nextToABeeper()) {
-            
+            if (frontIsClear() == true) {
+                turnRight();
+                closeWindows();
+            }   
+                else{
+                 if (frontIsClear() == false) {
+                     turnLeft();
+                    }
+                }
         }
     }
-}
+    public void closeWindows() {
+        if (frontIsClear() == true) {
+                putBeeper();
+                turnLeft();
+                move();
+            }
+                else{
+                    turnLeft();
+                    move();
+                }
+        }
+    }
 
